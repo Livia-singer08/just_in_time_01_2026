@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just in Time | Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>Just <span>in Time</span></h1>
+            <p>Gestão de Produção MDF</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="producao.html">Produção</a></li>
+                <li>
+                    <button id="logout" class="btn-logout">
+                        Sair
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-text">
+                <p class="subtitulo">SISTEMA DE GESTÃO</p>
+
+                <h2>
+                    Produza conforme a
+                    <span>demanda.</span>
+                </h2>
+
+                <p>
+                    Controle seus produtos, acompanhe o estoque e
+                    registre as movimentações de produção de forma
+                    simples e eficiente.
+                </p>
+
+                <div class="hero-botoes">
+                    <a href="produtos.html" class="btn">
+                        Gerenciar Produtos
+                    </a>
+
+                    <a href="producao.html" class="btn btn-secundario">
+                        Gestão de Produção
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="card-icon">⚙</div>
+                <h3>Just in Time</h3>
+                <p>
+                    Estoque mínimo, menos desperdício
+                    e produção de acordo com a demanda.
+                </p>
+            </div>
+        </section>
+
+        <section class="resumo">
+
+            <div class="resumo-card">
+                <div>
+                    <p>Produtos cadastrados</p>
+                    <h3 id="total-produtos">0</h3>
+                </div>
+                <span>📦</span>
+            </div>
+
+            <div class="resumo-card">
+                <div>
+                    <p>Estoque total</p>
+                    <h3 id="total-estoque">0</h3>
+                </div>
+                <span>🏭</span>
+            </div>
+
+            <div class="resumo-card">
+                <div>
+                    <p>Estoque baixo</p>
+                    <h3 id="estoque-baixo">0</h3>
+                </div>
+                <span>⚠️</span>
+            </div>
+
+            <div class="resumo-card">
+                <div>
+                    <p>Usuário conectado</p>
+                    <h3 id="nome-usuario">Usuário</h3>
+                </div>
+                <span>👤</span>
+            </div>
+
+        </section>
+
+        <section class="atalhos">
+
+            <div class="section-header">
+                <div>
+                    <p class="subtitulo">ACESSO RÁPIDO</p>
+                    <h2>O que você deseja fazer?</h2>
+                    <p>
+                        Acesse rapidamente as principais funções do sistema.
+                    </p>
+                </div>
+            </div>
+
+            <div class="atalhos-grid">
+
+                <a href="produtos.html" class="atalho-card">
+                    <div class="atalho-icon">📦</div>
+                    <div>
+                        <h3>Cadastro de Produtos</h3>
+                        <p>
+                            Cadastre, edite, pesquise e exclua produtos.
+                        </p>
+                    </div>
+                    <span class="seta">→</span>
+                </a>
+
+                <a href="producao.html" class="atalho-card">
+                    <div class="atalho-icon">🏭</div>
+                    <div>
+                        <h3>Gestão de Produção</h3>
+                        <p>
+                            Registre pedidos e produtos fabricados.
+                        </p>
+                    </div>
+                    <span class="seta">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Just in Time - Gestão de Produção MDF</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

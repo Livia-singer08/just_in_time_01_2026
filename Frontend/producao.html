@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just in Time | Produção</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>Just <span>in Time</span></h1>
+            <p>Gestão de Produção MDF</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li>
+                    <a href="producao.html" class="ativo">
+                        Produção
+                    </a>
+                </li>
+                <li>
+                    <button id="logout" class="btn-logout">
+                        Sair
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="pagina-topo">
+            <div>
+                <p class="subtitulo">JUST IN TIME</p>
+                <h2>Gestão de Produção</h2>
+                <p>
+                    Registre entradas e saídas do estoque.
+                </p>
+            </div>
+        </section>
+
+        <section class="producao-grid">
+
+            <div class="form-card">
+
+                <h3>Nova Movimentação</h3>
+
+                <form id="form-producao">
+
+                    <div class="campo">
+                        <label for="produto">
+                            Produto
+                        </label>
+
+                        <select id="produto" required>
+                            <option value="">
+                                Selecione um produto
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="tipo">
+                            Tipo de movimentação
+                        </label>
+
+                        <select id="tipo" required>
+                            <option value="">
+                                Selecione o tipo
+                            </option>
+
+                            <option value="FABRICADO">
+                                Fabricado - Entrada
+                            </option>
+
+                            <option value="PEDIDO">
+                                Pedido - Saída
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="quantidade">
+                            Quantidade
+                        </label>
+
+                        <input
+                            type="number"
+                            id="quantidade"
+                            min="1"
+                            placeholder="Informe a quantidade"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="data">
+                            Data da movimentação
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data"
+                            required
+                        >
+                    </div>
+
+                    <div id="mensagem-producao" class="mensagem"></div>
+
+                    <button
+                        type="submit"
+                        class="btn btn-full">
+                        Registrar Movimentação
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="estoque-card">
+
+                <div class="estoque-header">
+                    <h3>Situação do Estoque</h3>
+
+                    <span>
+                        Atualizado automaticamente
+                    </span>
+                </div>
+
+                <div
+                    class="estoque-lista"
+                    id="lista-estoque">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="produtos historico">
+
+            <div class="section-header">
+                <div>
+                    <p class="subtitulo">MOVIMENTAÇÕES</p>
+                    <h2>Histórico de Produção</h2>
+                    <p>
+                        Registros de pedidos e produtos fabricados.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Produto</th>
+                            <th>Tipo</th>
+                            <th>Quantidade</th>
+                            <th>Data</th>
+                            <th>Usuário</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabela-historico">
+                        <tr>
+                            <td colspan="6">
+                                Carregando movimentações...
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Just in Time - Gestão de Produção MDF</p>
+    </footer>
+
+    <script src="producao.js"></script>
+</body>
+</html>
